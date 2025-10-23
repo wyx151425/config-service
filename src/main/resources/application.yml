@@ -14,8 +14,9 @@ spring:
     config:
       server:
         git:
-          uri: https://github.com/wyx151425/config-service
+          uri: https://github.com/wyx151425/config-repo
           default-label: main
           timeout: 5
           clone-on-start: true
           force-pull: true
+          skip-ssl-validation: true
