@@ -1,10 +1,21 @@
 package com.polarbookshop.configservice;
 
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.boot.test.web.client.TestRestTemplate;
+import org.springframework.cloud.config.environment.Environment;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+
+import static org.assertj.core.api.Assertions.assertThat;
 
 @SpringBootTest
 class ConfigServiceApplicationTests {
+
+    @Autowired
+    private TestRestTemplate restTemplate;
 
     @Test
     void contextLoads() {
